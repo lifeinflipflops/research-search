@@ -12,7 +12,9 @@
     Example:
     https://cse.google.com/cse.js?cx=0123456789abcdef
   -->
-  <script async src="https://cse.google.com/cse.js?cx=63c8dfd719bdb445c"></script>
+  <script async src="https://cse.google.com/cse.js?cx=63c8dfd719bdb445c">
+</script>
+<div class="gcse-search"></div>
 
   <style>
     :root {
@@ -53,7 +55,7 @@
     }
 
     main {
-      width: min(1040px, calc(100% - 32px));
+      width: min(1400px, calc(100% - 32px));
       margin: 18px auto 48px;
       padding: 24px;
       background: var(--surface);
@@ -62,13 +64,24 @@
       box-shadow: 0 2px 10px rgba(60, 64, 67, 0.08);
     }
 
-    /* Let Google's search/results element fill our centred container. */
-    .gcse-search,
-    .gsc-control-cse,
-    .gsc-control-wrapper-cse {
-      width: 100% !important;
-      max-width: none !important;
-    }
+/* Let Google's search/results element fill our centred container. */
+.gcse-search,
+.gsc-control-cse,
+.gsc-control-wrapper-cse,
+.gsc-results-wrapper-nooverlay,
+.gsc-results-wrapper-visible,
+.gsc-results,
+.gsc-wrapper,
+.gsc-webResult,
+.gsc-result {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.gsc-results-wrapper-nooverlay {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
     /* Keep the page clean on smaller Chromebook screens. */
     @media (max-width: 640px) {
